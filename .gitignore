@@ -1,0 +1,9 @@
+/tmp/
+__pycache__/
+bun.lockb
+node_modules/
+.DS_Store
+/lib/
+/woff2/
+/ttf/misans.ttf
+/ttf/SourceHanSans-VF.ttf

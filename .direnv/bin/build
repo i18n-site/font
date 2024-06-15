@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+rm -rf lib
+
+rsync -av --exclude='*.coffee' ./src/ ./tmp/
+
+bun x cep -o lib -c src &
+
+wait || \
+  {
+    echo "error : $?" >&2
+    exit 1
+  }
+
