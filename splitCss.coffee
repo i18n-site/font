@@ -8,7 +8,7 @@ ROOT = import.meta.dirname
 
 CSS = {}
 
-for i from read(ROOT+'/lib/.css').split('}')
+for i from read(ROOT+'/lib/_.css').split('}')
   i = i.trim()
   if not i
     continue

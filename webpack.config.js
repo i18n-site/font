@@ -56,7 +56,7 @@ export default {
 	},
 	plugins: [
 		new MiniCssExtractPlugin({
-			filename: ".css",
+			filename: "_.css",
 		}),
 	],
 };
