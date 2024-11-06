@@ -12,9 +12,8 @@ Split three types of free commercial Chinese fonts based on [cn-font-split](http
 
 ## Body Font s
 
-Only retains weights 300 and 500
-
-[MiSans](https://hyperos.mi.com/font/zh/download/)
+SourceHanSans-VF
+https://mirrors.cloud.tencent.com/adobe-fonts/source-han-sans/Variable/TTF/
 
 ## Code Font c
 
@@ -67,11 +66,8 @@ brew install woff2
 
 ## 正文字体 s
 
-只保留了 300 和 500 的字重
-
-[Sinter](https://mp.weixin.qq.com/s/DoOt9uRTbkoxha6AVKo9Kg)
-
-![](https://i-01.eu.org/1717043302.avif)
+思源黑体可变版
+https://mirrors.cloud.tencent.com/adobe-fonts/source-han-sans/Variable/TTF/
 
 ## 代码字体 c
 

@@ -1,7 +1,7 @@
 {
   "name": "fc3",
   "type": "module",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "description": "Chinese font",
   "license": "Apache-2.0",
   "repository": {
@@ -13,7 +13,9 @@
     "font",
     "chinese"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "@3-/extract": "^0.0.2"
+  },
   "files": [
     "*"
   ],

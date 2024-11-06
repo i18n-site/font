@@ -27,7 +27,7 @@ fsplit = (FontPath, destFold, fontFamily,fontWeight)=>
     reporter: true
     threads: {}
     autoChunk: false
-    subsets: await subset(FontPath,300)
+    subsets: await subset(FontPath,600)
     css: {
       localFamily: false
       fontFamily

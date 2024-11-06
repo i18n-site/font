@@ -16,3 +16,4 @@ rsync -av woff2/ tmp
 cd $DIR
 bun x webpack --mode production
 rm -rf lib/main.js
+direnv exec . ./splitCss.coffee
