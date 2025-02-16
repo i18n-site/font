@@ -1,7 +1,7 @@
 #!/usr/bin/env coffee
 
 > @3-/read
-  @3-/extract > extract
+  @3-/extract
   @3-/write
 
 ROOT = import.meta.dirname
@@ -13,7 +13,7 @@ for i from read(ROOT+'/lib/_.css').split('}')
   if not i
     continue
 
-  name = extract(i,'font-family:',';')
+  name = extract('font-family:',';',i)
   CSS[name] = (CSS[name] or '')+i+'}'
 
 for [k,v] from Object.entries CSS

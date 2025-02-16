@@ -8,7 +8,7 @@
   @3-/write
   @3-/walk > walkRel
   fs > existsSync readFileSync
-  ./subset.coffee
+  # ./subset.coffee
 
 $.verbose = true
 
@@ -16,24 +16,24 @@ ROOT = uridir(import.meta)
 
 cd ROOT
 
-fsplit = (font, outDir, fontFamily,fontWeight)=>
-  console.log {font, outDir}
+fsplit = (font, outDir, fontFamily)=>
+  console.log {
+    font, outDir
+    fontFamily
+  }
   input = new Uint8Array(readFileSync(font).buffer)
-  console.log input
   fontSplit {
     input
     outDir
-    # targetType: 'woff2'
-    # chunkSize: 1024*512
-    # testHTML: true
-    # reporter: true
-    # threads: {}
-    # autoChunk: false
-    # subsets: await subset(FontPath,600)
+    targetType: 'woff2'
+    chunkSize: 1024*512
+    testHTML: true
+    reporter: true
+    threads: {}
+    autoChunk: true
     css: {
-      localFamily: false
       fontFamily
-      fontWeight
+      localFamily:false
     }
   }
 
@@ -46,6 +46,9 @@ rename = (dst, to_name)=>
   css = css.replaceAll(
     '"'+to_name+'"'
     to_name
+  ).replaceAll(
+    'local('+to_name+'),'
+    ''
   )
   write(
     join dst, 'f.styl'
@@ -71,8 +74,8 @@ gen = (font_file, fontFamily, fontWeight)=>
   rename dst, fontFamily
   return
 
-await gen('AlimamaFangYuanTiVF-Thin.ttf', 'h',700)
-await gen('SourceHanSans-VF.ttf','s','1 999')
+await gen('AlimamaFangYuanTiVF-Thin.ttf', 'h')
+await gen('SourceHanSans-VF.ttf','s')
 # await gen('misans.ttf', 'MiSans VF','s','1 999')
 
 # sinter = join TTF, 'sinter'
